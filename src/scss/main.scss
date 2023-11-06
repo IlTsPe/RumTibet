@@ -1,0 +1,51 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 50px;
+	scrollbar-gutter: stable;
+}
+
+// базовые подключения
+@import "./vendor/normalize";
+@import "./vendor/airDate";
+@import "./vendor/fancy";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+body {
+	position: relative;
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: var(--main-font-size);
+	background-color: var(--white);
+	color: var(--cinder);
+}
+
+.body--modal {
+	overflow: hidden !important;
+}
+
+.container {
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// подключения компонентов страницы
+@import "./components/general";
+@import "./components/block-animation";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/program";
+@import "./components/destinations";
+@import "./components/blog";
+@import "./components/impressions";
+@import "./components/grid-gallery";
+@import "./components/newsletters";
+@import "./components/footer";
+@import "./components/policy";
+@import "./components/404";
+@import "./components/burger";
+@import "./components/modal";

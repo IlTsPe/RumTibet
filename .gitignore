@@ -1,6 +1,4 @@
 package-lock.json
 package.json
 gulpfile.js
-src
 node_modules
-.gitignore
