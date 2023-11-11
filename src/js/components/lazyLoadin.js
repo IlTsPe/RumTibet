@@ -1,16 +1,18 @@
 const images = document.querySelectorAll('img[data-src]');
 
 const loadImg = function (entries, observer) {
-	const entry = entries[0];
-	if (!entry.isIntersecting) return
-	entry.target.srcset = entry.target.dataset.src;
-	// entry.target.addEventListener('load', () => entry.target.classList.remove('lazy-img')); // тк мб плохой интернет, тогда хорошее изображение не успеет подгрузиться
-	observer.unobserve(entry.target);
+	entries.forEach(item => {
+		if (!item.isIntersecting) return
+		item.target.srcset = item.target.dataset.src;
+		console.log(item.target.classList);
+		item.target.addEventListener('load', () => item.target.classList.remove('layz-blur')); // тк мб плохой интернет, тогда хорошее изображение не успеет подгрузиться
+		observer.unobserve(item.target);
+	})
 };
 
-const lazyObserver = new IntersectionObserver(loadImg, { //сам observer
+const lazyObserver = new IntersectionObserver(loadImg, {
 	root: null,
 	threshold: 0.1,
 });
 
-images.forEach(img => lazyObserver.observe(img)); //слежка за img
+images.forEach(img => lazyObserver.observe(img));

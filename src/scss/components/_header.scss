@@ -88,10 +88,6 @@
 }
 
 @media (max-width:1024px) {
-	.header-fixed {
-		position: absolute;
-	}
-
 	.header__left {
 		padding-top: 50px;
 		position: fixed;
@@ -127,7 +123,6 @@
 
 		&-burger {
 			display: block;
-
 		}
 	}
 

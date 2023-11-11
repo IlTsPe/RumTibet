@@ -346,3 +346,8 @@ select:focus-visible {
 .mb-50 {
 	margin-bottom: var(--50-indent);
 }
+
+
+.layz-blur {
+	filter: blur(4px);
+}

@@ -3255,6 +3255,11 @@ select:focus-visible {
   margin-bottom: var(--50-indent);
 }
 
+.layz-blur {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
 [data-animation] {
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
@@ -3416,9 +3421,6 @@ select:focus-visible {
   }
 }
 @media (max-width: 1024px) {
-  .header-fixed {
-    position: absolute;
-  }
   .header__left {
     padding-top: 50px;
     position: fixed;
@@ -3659,8 +3661,8 @@ select:focus-visible {
 .programs__gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (250px)[2];
+  grid-template-columns: repeat(2, 250px);
   max-width: 510px;
   gap: 10px;
 }
@@ -3669,17 +3671,20 @@ select:focus-visible {
     display: none;
   }
 }
-.programs__gallery-img:nth-child(1), .programs__gallery-img:nth-child(4) {
+.programs__gallery-item:nth-child(1) img, .programs__gallery-item:nth-child(4) img {
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-.programs__gallery-img:nth-child(2), .programs__gallery-img:nth-child(3) {
+.programs__gallery-item:nth-child(2) img, .programs__gallery-item:nth-child(3) img {
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 .programs__gallery-item {
   -ms-grid-column-span: 1;
   grid-column: span 1;
+}
+.programs__gallery-item img {
+  width: 100%;
 }
 @media (max-width: 1000px) {
   .programs__gallery-item {
@@ -3713,6 +3718,9 @@ select:focus-visible {
 .destinations__item {
   position: relative;
   display: inline-block;
+  width: 100%;
+  max-width: 350px;
+  height: 500px;
   overflow: hidden;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
@@ -3729,6 +3737,8 @@ select:focus-visible {
 }
 .destinations__img {
   display: block;
+  width: inherit;
+  height: 100%;
   border-radius: 32px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -3877,15 +3887,21 @@ select:focus-visible {
   -webkit-box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
   box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
 }
-.card-blog picture {
+.card-blog__img {
   height: 100%;
 }
-.card-blog img {
+.card-blog__img img {
   max-width: 100%;
+  min-width: 133px;
   height: inherit;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 6px;
+}
+@media (max-width: 370px) {
+  .card-blog__img img {
+    display: none;
+  }
 }
 .card-blog__info {
   display: -webkit-box;
@@ -4724,7 +4740,7 @@ select:focus-visible {
 @media (max-width: 1024px) {
   .burger {
     position: fixed;
-    top: 50px;
+    top: 40px;
     right: 5%;
     width: 36px;
     height: 21px;

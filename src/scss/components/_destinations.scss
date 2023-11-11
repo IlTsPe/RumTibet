@@ -13,6 +13,9 @@
 	&__item {
 		position: relative;
 		display: inline-block;
+		width: 100%;
+		max-width: 350px;
+		height: 500px;
 		overflow: hidden;
 		transition: all 0.7s;
 
@@ -29,6 +32,8 @@
 
 	&__img {
 		display: block;
+		width: inherit;
+		height: 100%;
 		border-radius: 32px;
 		object-fit: cover;
 	}

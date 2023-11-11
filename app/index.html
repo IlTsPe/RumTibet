@@ -297,12 +297,13 @@
 		data-animation>
         <div class="about__media">
             <div class="about__picture">
-                <img class="about__img about__img--hidden" src="img/about-1.jpg"
+                <img class="about__img about__img--hidden layz-blur" src="img/about-1.jpg"
 					srcset="img/about-1-lazy.jpg" data-src="img/about-1.webp"
 					alt="Горы в облаках" loading="lazy">
             </div>
             <div class="about__video">
-                <img class="about__img" src="img/about-2.jpg" data-src="img/about-2.webp"
+                <img class="about__img layz-blur" src="img/about-2.jpg"
+					data-src="img/about-2.webp"
 					srcset="img/about-2-lazy.jpg" alt="Дом в горах">
                 <button class="about__play fancy-btn" data-width="640"
 					data-height="360">
@@ -391,30 +392,25 @@
             </div>
             <div class="programs__gallery">
                 <div class="programs__gallery-item">
-                    <img src="img/program-1.jpg" srcset="img/program-1.webp" data-src alt="
+                    <img srcset="img/program-1-layz.jpg" data-src alt="
 						Изображение из программы"
-						class="programs__gallery-img" loading="lazy">
+						class="programs__gallery-img layz-blur" src="img/program-1.jpg"
+						data-src="img/program-1.webp" loading="lazy">
                 </div>
                 <div class="programs__gallery-item">
-                    <picture>
-                        <source srcset="img/program-2.webp" type="image/webp" loading="lazy">
-                        <img src="img/program-2.jpg" alt="Изображение из программы"
-							class="programs__gallery-img" loading="lazy">
-                    </picture>
+                    <img src="img/program-2.jpg" alt="Изображение из программы"
+						class="programs__gallery-img layz-blur" srcset="img/program-2-layz.jpg"
+						data-src="img/program-2.webp" loading="lazy">
                 </div>
                 <div class="programs__gallery-item">
-                    <picture>
-                        <source srcset="img/program-3.webp" type="image/webp" loading="lazy">
-                        <img src="img/program-3.jpg" alt="Изображение из программы"
-							class="programs__gallery-img" loading="lazy">
-                    </picture>
+                    <img src="img/program-3.jpg" alt="Изображение из программы"
+						class="programs__gallery-img layz-blur" srcset="img/program-3-layz.jpg"
+						data-src="img/program-3.webp" loading="lazy">
                 </div>
                 <div class="programs__gallery-item">
-                    <picture>
-                        <source srcset="img/program-4.webp" type="image/webp" loading="lazy">
-                        <img src="img/program-4.jpg" alt="Изображение из программы"
-							class="programs__gallery-img" loading="lazy">
-                    </picture>
+                    <img src="img/program-4.jpg" alt="Изображение из программы"
+						class="programs__gallery-img layz-blur" srcset="img/program-4-layz.jpg"
+						data-src="img/program-4.webp" loading="lazy">
                 </div>
             </div>
         </div>
@@ -429,11 +425,10 @@
         </div>
         <ul class="destinations__list mb-50" data-animate>
             <li class="destinations__item left-appearance-block" destinations>
-                <picture>
-                    <source srcset="img/destinations-1.webp" type="image/webp">
-                    <img src="img/destinations-1.jpg" alt="Природа" class="destinations__img"
-						loading="lazy">
-                </picture>
+                <img src="img/destinations-1.jpg" alt="Природа"
+					class="destinations__img lazy-blur"
+					srcset="img/destinations-1-lazy.jpg" data-src="img/destinations-1.webp"
+					loading="lazy">
                 <div class="text-block">
                     <div class="text-block__header mb-40">
                         <div class="text-block__titles">
@@ -460,11 +455,10 @@
                 <div class="raiting"><span>4.9</span></div>
             </li>
             <li class="destinations__item left-appearance-block2" destinations>
-                <picture>
-                    <source srcset="img/destinations-2.webp" type="image/webp">
-                    <img src="img/destinations-2.jpg" alt="Природа" class="destinations__img"
-						loading="lazy">
-                </picture>
+                <img src="img/destinations-2.jpg" alt="Природа"
+					class="destinations__img lazy-blur"
+					srcset="img/destinations-2-layz.jpg" data-src="img/destinations-2.webp"
+					loading="lazy">
                 <div class="text-block">
                     <div class="text-block__header mb-40">
                         <div class="text-block__titles">
@@ -491,11 +485,10 @@
                 <div class="raiting"><span>4.9</span></div>
             </li>
             <li class="destinations__item left-appearance-block3" destinations>
-                <picture>
-                    <source srcset="img/destinations-3.webp" type="image/webp">
-                    <img src="img/destinations-3.jpg" alt="Природа" class="destinations__img"
-						loading="lazy">
-                </picture>
+                <img src="img/destinations-3.jpg" alt="Природа"
+					class="destinations__img lazy-blur"
+					srcset="img/destinations-3-layz.jpg" data-src="img/destinations-3.webp"
+					loading="lazy">
                 <div class="text-block">
                     <div class="text-block__header mb-40">
                         <div class="text-block__titles">
@@ -545,10 +538,9 @@
         <div class="blog__content " data-animate>
             <article class="card-blog appearance-block4" blog>
                 <div class="card-blog__img">
-                    <picture>
-                        <source srcset="img/blog-1.webp" type="image/webp">
-                        <img class="blog__img" src="img/blog-1.jpg" alt="Фото из блога">
-                    </picture>
+                    <img class="blog__img layz-blur" src="img/blog-1.jpg"
+						srcset="img/blog-1-layz.jpg" data-src="img/blog-1.webp"
+						alt="Фото из блога">
                 </div>
                 <div class="card-blog__info">
                     <a href="404.html"
@@ -575,10 +567,9 @@
             </article>
             <article class="card-blog appearance-block4" blog>
                 <div class="card-blog__img">
-                    <picture>
-                        <source srcset="img/blog-2.webp" type="image/webp">
-                        <img class="blog__img" src="img/blog-2.jpg" alt="Фото из блога">
-                    </picture>
+                    <img class="blog__img layz-blur" src="img/blog-2.jpg"
+						srcset="img/blog-2-layz.jpg"
+						data-src="img/blog-2.webp" alt="Фото из блога">
                 </div>
                 <div class="card-blog__info">
                     <a href="404.html"
@@ -606,10 +597,9 @@
             </article>
             <article class="card-blog appearance-block5" blog>
                 <div class="card-blog__img">
-                    <picture>
-                        <source srcset="img/blog-3.webp" type="image/webp">
-                        <img class="blog__img" src="img/blog-3.jpg" alt="Фото из блога">
-                    </picture>
+                    <img class="blog__img layz-blur" src="img/blog-3.jpg"
+						srcset="img/blog-3-layz.jpg"
+						data-src="img/blog-3.webp" alt="Фото из блога">
                 </div>
                 <div class="card-blog__info">
                     <a href="404.html"
@@ -632,10 +622,9 @@
             </article>
             <article class="card-blog appearance-block5" blog>
                 <div class="card-blog__img">
-                    <picture>
-                        <source srcset="img/blog-4.webp" type="image/webp">
-                        <img class="blog__img" src="img/blog-4.jpg" alt="Фото из блога">
-                    </picture>
+                    <img class="blog__img layz-blur" src="img/blog-4.jpg"
+						srcset="img/blog-4-layz.jpg"
+						data-src="img/blog-4.webp" alt="Фото из блога">
                 </div>
                 <div class="card-blog__info">
                     <a href="404.html"
