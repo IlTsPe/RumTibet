@@ -1,0 +1,140 @@
+.blog {
+	padding-top: var(--80-indent);
+	padding-bottom: var(--100-indent);
+	overflow: hidden;
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(460px, 1fr));
+		flex-wrap: wrap;
+		column-gap: 20px;
+		row-gap: 24px;
+
+		@media(max-width: 970px) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.card-blog {
+	padding: 16px;
+	display: flex;
+	gap: 24px;
+	border-radius: 10px;
+	background-color: var(--white);
+	transition: box-shadow 0.2s, transform 1s;
+
+	&:hover {
+		box-shadow: 0px 0px 15px 0px rgba(24, 18, 30, 0.12);
+	}
+
+	&__img {
+		height: 100%;
+
+		img {
+			max-width: 100%;
+			min-width: 133px;
+			height: inherit;
+			object-fit: cover;
+			border-radius: 6px;
+
+			@media(max-width:370px) {
+				display: none;
+			}
+		}
+
+	}
+
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 294px;
+		color: var(--cinder);
+	}
+
+	&__title {
+		margin-top: 16px;
+		margin-bottom: 24px;
+		position: relative;
+
+		h4 {
+			font-size: var(--fz-24);
+			font-weight: 600;
+			line-height: 133%;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+	}
+
+	&__text {
+		font-size: var(--fz-14);
+		font-weight: 400;
+		line-height: 143%;
+		margin-bottom: 24px;
+
+		// &--overflow {
+		// 	overflow: auto;
+		// }
+	}
+
+
+	&__footer {
+		@include flex-between-center;
+		margin-top: auto;
+		margin-bottom: 16px;
+		font-size: var(--fz-14);
+		font-weight: 700;
+		line-height: 143%;
+	}
+
+	&__date {
+		color: var(--saffron);
+
+		@media(max-width: 1027px) {
+			font-size: 10px;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		font-size: inherit;
+		font-weight: inherit;
+		color: var(--papa-green);
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: rgba(0, 102, 54, 0.205);
+			transition: width ease-in 0.2s;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+
+		&--disabled {
+			color: rgba(128, 128, 128, 0.274);
+			cursor: default;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&.opened-content {
+			color: rgb(48, 79, 255);
+
+			&::after {
+				background-color: rgba(48, 79, 255, 0.205);
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-image: url(../img/heroBG.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&__container {
+		margin-top: auto;
+		padding-bottom: 82px;
+
+		@media(max-width:1024px) {
+			padding-bottom: var(--50-indent);
+		}
+	}
+
+	&__title {
+		margin-bottom: clamp(30px, 6vw, 42px);
+		font-family: 'Nextart';
+		font-size: clamp(var(--fz-20), 6vw, 50px);
+		font-weight: 700;
+		line-height: 150%;
+		letter-spacing: 1px;
+		color: var(--white);
+	}
+
+	&__btn {
+		height: 50%;
+
+		@media(max-width: 930px) {
+			& {
+				width: 100%;
+				max-width: 270px;
+			}
+		}
+	}
+
+	option {
+		color: black;
+
+		&[disabled] {
+			display: none;
+		}
+	}
+}

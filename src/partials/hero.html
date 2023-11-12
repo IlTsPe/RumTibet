@@ -1,0 +1,38 @@
+<section class="hero" id="main">
+	<div class="container hero__container" data-animation>
+		<h1 class="hero__title">Насладись прогулкой в&nbsp;горах
+			с&nbsp;командой
+			единомышленников</h1>
+		<form class="choose-programm">
+			<div class="choose-programm__item">
+				<select name="location" id="location">
+					<option value disabled selected>Локация для тура</option>
+					<option value="Чехия">Чехия</option>
+					<option value="Англия">Англия</option>
+					<option value="Бельгия">Бельгия</option>
+				</select>
+				<label for="location" class="choose-programm__label">выберите из списка</label>
+			</div>
+			<div class="choose-programm__item">
+				<input type="text" id="airDate" placeholder="Дата похода">
+				<label for="airDate" class="choose-programm__label">укажите диапазон</label>
+			</div>
+			<div class="choose-programm__item">
+				<select name="participant" id="participant">
+					<option value disabled selected>Участники</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="8">8</option>
+				</select>
+				<label for="participant" class="choose-programm__label">минимум 4 человека</label>
+			</div>
+			<button type="submit"
+				class="btn btn--bold btn--green-text btn--white-bg hero__btn"
+				id="hero-btn1">Найти
+				программу</button>
+			<button type="reset"
+				class="reset-btn reset-btn--hidden"
+				id="hero-btn">Очистить поля</button>
+		</form>
+	</div>
+</section>
