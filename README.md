@@ -6,6 +6,6 @@
 
 Плагины (Plugins): fancybox, airDate.js
 
-GitHub Pages: [https://iltspe.github.io/CREATEX-Online-School/](https://iltspe.github.io/RumTibet/)
+GitHub Pages: https://iltspe.github.io/RumTibet/
 
 Макет (Layout): https://verstaem.online/projects/rumtibet/
