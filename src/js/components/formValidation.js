@@ -15,4 +15,4 @@ form.addEventListener('submit', (e) => {
 	} else {
 		window.location.href = "https://pegastk.com/?etext=2202.Ownu0OmdbGuRTQtVPb8F9r7-DYwVe7x_qw_vNAYcg5h1c3hhc29mYXhwenl3bGpz.d766a1ca3dba274ccb09ba75fd1c8d07a652a74b&yclid=5887379468034841082";
 	}
-})
+});
