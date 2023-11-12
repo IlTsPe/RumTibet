@@ -68,6 +68,14 @@
 			font-size: var(--fz-24);
 			font-weight: 700;
 			line-height: 120%;
+
+			@media(max-width:400px) {
+				font-size: var(--fz-20);
+			}
+
+			@media(max-width:350px) {
+				font-size: var(--fz-16);
+			}
 		}
 
 		&__subtitle {
@@ -84,6 +92,11 @@
 
 			border-radius: 4px;
 			background: rgba(255, 255, 255, 0.30);
+
+			@media(max-width:400px) {
+				padding: 6px 10px;
+				font-size: var(--fz-16);
+			}
 		}
 
 		&__info {

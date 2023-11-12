@@ -129,4 +129,10 @@
 	.consultation {
 		display: none;
 	}
+
+	@media(max-width: 800px) {
+		.logo img {
+			max-width: 65%;
+		}
+	}
 }

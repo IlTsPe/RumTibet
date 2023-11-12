@@ -4,7 +4,6 @@ const loadImg = function (entries, observer) {
 	entries.forEach(item => {
 		if (!item.isIntersecting) return
 		item.target.srcset = item.target.dataset.src;
-		console.log(item.target.classList);
 		item.target.addEventListener('load', () => item.target.classList.remove('layz-blur')); // тк мб плохой интернет, тогда хорошее изображение не успеет подгрузиться
 		observer.unobserve(item.target);
 	})

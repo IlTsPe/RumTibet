@@ -49,7 +49,7 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
-		flex: 1 1 294px;
+		flex: 1 0 294px;
 		color: var(--cinder);
 	}
 
@@ -75,7 +75,12 @@
 		font-weight: 400;
 		line-height: 143%;
 		margin-bottom: 24px;
+
+		// &--overflow {
+		// 	overflow: auto;
+		// }
 	}
+
 
 	&__footer {
 		@include flex-between-center;
@@ -113,6 +118,15 @@
 
 		&:hover::after {
 			width: 100%;
+		}
+
+		&--disabled {
+			color: rgba(128, 128, 128, 0.274);
+			cursor: default;
+
+			&::after {
+				display: none;
+			}
 		}
 
 		&.opened-content {
